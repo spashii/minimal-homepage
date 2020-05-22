@@ -21,11 +21,11 @@ function setElements() {
     let today = new Date(),
         hour  = today.getHours();
 
-    if(hour < 12) {
+    if(hour > 2 && hour < 12) {
         document.body.style.backgroundColor = '#fff';
         document.body.style.color = 'black'
         greeting.textContent = 'good morning';
-    } else if(hour >=12 && hour < 16) {
+    } else if(hour >= 12 && hour < 16) {
         document.body.style.backgroundColor = '#fff';
         document.body.style.color = 'black'
         greeting.textContent = 'good afternoon';
@@ -41,7 +41,7 @@ function setElements() {
 function getName() {
     if(localStorage.getItem('name') == null || localStorage.getItem('name') == '') {
         name.textContent = '[enter name]';
-        name.style.opacity = 0.5;
+        name.style.opacity = 0.4;
     } else {
         name.textContent = localStorage.getItem('name');
         name.style.opacity = 1;
@@ -62,8 +62,10 @@ function setName(e) {
 function getGoal() {
     if(localStorage.getItem('goal') == null || localStorage.getItem('goal') == '') {
         goal.textContent = '[enter goal]';
+        goal.style.opacity = 0.4;
     } else {
         goal.textContent = localStorage.getItem('goal');
+        goal.style.opacity = 0.7;
     }
 }
 
