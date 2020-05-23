@@ -8,7 +8,7 @@ function showTime() {
         hour  = today.getHours(),
         min   = today.getMinutes();
 
-    time.innerHTML = `${ addZero(hour) }<span>:</span>${ addZero(min) }`
+    time.textContent = `${ addZero(hour) }:${ addZero(min) }`
 
     setTimeout(showTime, 60000);
 }
